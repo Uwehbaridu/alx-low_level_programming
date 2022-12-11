@@ -11,8 +11,11 @@ int main(void)
 {
 	char i;
 
-	putchar("\n\nLower case characters:\n");
 	for (i = 'a'; i <= 'z'; i++)
-		putchar("%c ", i);
+	{
+		putchar(i);
+	}
+
+	putchar('\n');
 	return (0);
 }
