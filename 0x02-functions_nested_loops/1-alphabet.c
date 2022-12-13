@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 
 /*
  * main - function to print lower case letters
@@ -11,16 +12,10 @@ void print_alphabet(void)
 	char lc;
 
 	for (lc = 'a'; lc <= 'z'; lc++)
-		putchar(lc);
+		_putchar(lc);
 
-	putchar('\n');
+	_putchar('\n');
 
 	return;
 
-}
-
-int main(void)
-{
-	print_alphabet();
-	return (0);
 }
