@@ -1,12 +1,9 @@
 #include <stdio.h>
 #include "main.h"
 
-/*
- * main - function to print lower case letters
- *
- * Return: Always 0
+/**
+ * print_alphabet - prints the alpha in lowercase
  */
-
 void print_alphabet(void)
 {
 	char lc;
@@ -15,7 +12,5 @@ void print_alphabet(void)
 		_putchar(lc);
 
 	_putchar('\n');
-
-	return;
 
 }
