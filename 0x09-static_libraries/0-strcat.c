@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * _strcat - concatenates two strings
- * @dest: copying to
- * @src: copying from
+ *_strcat - concatenates two strings
+ *@dest: copying to
+ *@src: copying from
  *
- * Return: pointer to dest
+ *Return: pointer to dest
  */
 
 char *_strcat(char *dest, char *src)
@@ -15,14 +15,14 @@ char *_strcat(char *dest, char *src)
 	i = 0;
 	while (dest[i] != '\0')
 	{
-		i++;
+	i++;
 	}
 	j = 0;
 	while (src[j] != '\0')
 	{
-		dest[i] = src[j];
-		j++;
-		i++;
+	dest[i] = src[j];
+	j++;
+	i++;
 	}
 	dest[i] = '\0';
 	return (dest);

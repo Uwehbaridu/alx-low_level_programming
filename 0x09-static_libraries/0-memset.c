@@ -1,22 +1,16 @@
-#include <stdlib.h>
 #include "main.h"
 
 /**
- * _memset - fills memory with a constant byte
+ *_isupper - checks for uppercase character
+ *@c: character
  *
- * @s: memory area to be filled
- * @b: char to copy
- * @n: number of times to copy b
- *
- * Return: pointer to the memory area s
+ *Return: 1 or 0
  */
 
-char *_memset(char *s, char b, unsigned int n)
+int _isupper(int c)
 {
-	unsigned int i;
-	for (i = 0; i < n; i++)
-	{
-		s[i] = b;
-	}
-	return (s);
+	if (c >= 'A' && c <= 'Z')
+	return (1);
+	else
+	return (0);
 }
