@@ -2,20 +2,27 @@
 #include "function_pointers.h"
 
 /**
- * array_iterator - execute function given as parameter on element of array.
- * @size: size of the array
- * @action: function pointer
- * @array: input integer.
+ * int_index - searches for intger.
+ * @array: input array
+ * @size: number of element
+ * @cmp: function pointer.
  *
- * Return - No return.
+ * Return: int_index: returns the index of the first element
+ * return: do not return 0 If no element matches
+ * return -1, If size <= 0, return -1.
  */
 
-void array_iterator(int *array, size_t size, void (*action)(int))
+int int_index(int *array, int size, int (*cmp)(int))
 {
-	unsigned int i;
+	int i;
 
-	if (array && action)
+	if (array && cmp)
+	{
+		if (size <= 0)
+			return (-1);
 		for (i = 0; i < size; i++)
-			action(array[i]);
+			if (cmp(array[i]))
+				return (i);
+	}
+	return (-1);
 }
-
